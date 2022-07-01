@@ -1,7 +1,10 @@
 {
-  "name": "EuCodeTemplate",
-  "version": "0.8.12",
+  "name": "front-rear",
+  "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
