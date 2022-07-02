@@ -5,7 +5,7 @@
         <v-list-item two-line class="miniVariant && 'px-0'">
           <v-list-item-avatar>
             <img
-              src='https://google.com/google.png'
+              src='../assets/avatar.png'
             />
           </v-list-item-avatar>
 
@@ -63,7 +63,8 @@
 
 <script>
 import {
-  mdiViewDashboard
+  mdiViewDashboard,
+  mdiAccount
 } from "@mdi/js";
 export default {
   props: {
@@ -75,6 +76,7 @@ export default {
     timestamp: '',
     items: [
       { title: "Dashboard", icon: mdiViewDashboard, link: "/dashboard" },
+      { title: "Usuários", icon: mdiAccount, link: "/users" },
     ],
     drawer: null,
     ChangeTheme: false,
