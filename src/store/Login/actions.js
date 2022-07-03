@@ -6,13 +6,13 @@ export default {
         commit('CLEAR_ERROR');
         console.log('[ACTION_LOGIN] Payload: ', payload)
         try{
-            const {data} = await authAPI.post('/auth', payload);
+            const response = await authAPI.post('/auth', payload);
 
-            console.log('[ACTION_LOGIN] Response da API: ', data)
+            console.log('[ACTION_LOGIN] Response da API: ', response)
 
-            localStorage.TOKEN = data.token;
+            localStorage.TOKEN = response.data?.token;
 
-            const decodedToken = Vue.$jwt.decode(data.token);
+            const decodedToken = Vue.$jwt.decode(response.data?.token);
 
             console.log('[ACTION_LOGIN] Setou o token JWT: ', decodedToken)
 
