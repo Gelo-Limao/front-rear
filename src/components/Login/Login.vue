@@ -71,12 +71,13 @@
 </style>
 
 <script>
+import constants from '../../util/constants'
 import { mapActions, mapGetters } from "vuex";
 
 export default {
   data: () => ({
     laoding: false,
-    msg: "Usuário e/ou senha errado!",
+    msg: constants.STRINGS.ERROR_MESSAGE_LOGIN,
     snackbar: false,
     email: "",
     password: "",
