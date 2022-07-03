@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import authAPI from '../../config/api';
+import api from '../../config/api';
 
 export default {
     async login({commit}, payload){
         commit('CLEAR_ERROR');
         console.log('[ACTION_LOGIN] Payload: ', payload)
         try{
-            const response = await authAPI.post('/auth', payload);
+            const response = await api.post('/auth', payload);
 
             console.log('[ACTION_LOGIN] Response da API: ', response)
 
@@ -16,7 +16,7 @@ export default {
 
             console.log('[ACTION_LOGIN] Setou o token JWT: ', decodedToken)
 
-            authAPI.defaults.headers.common.Authorization = `Bearer ${localStorage.TOKEN}`;
+            api.defaults.headers.common.Authorization = `Bearer ${localStorage.TOKEN}`;
 
             commit('SET_LOGIN', decodedToken);
 

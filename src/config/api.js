@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const authAPI = axios.create({
+const api = axios.create({
     baseURL: 'https://api-test-geloelimao.herokuapp.com',
     headers: {
         Accept: 'application/json',
@@ -8,4 +8,4 @@ const authAPI = axios.create({
     }
 });
 
-export default authAPI
+export default api
