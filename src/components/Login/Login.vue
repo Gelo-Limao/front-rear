@@ -102,7 +102,6 @@ export default {
 
       await this.login({ email: this.email, password: this.password });
 
-
       if (!this.errorPass) {
         
         this.$router.push("/dashboard");
