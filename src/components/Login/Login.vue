@@ -97,15 +97,25 @@ export default {
     initialize() {},
 
     async hendleLogin() {
+
       this.$router.push("/dashboard");
       this.laoding = true;
+
       await this.login({ email: this.email, password: this.password });
+
+      console.log('ErrorPass: ', this.errorPass)
+
       if (!this.errorPass) {
+
         this.laoding = false;
-      } else {
-        this.snackbar = true;
-        this.laoding = false;
-      }
+        return
+
+      } 
+
+      this.snackbar = true;
+      this.laoding = false;
+      return
+
     },
   },
   created() {
