@@ -102,7 +102,6 @@ export default {
 
       await this.login({ email: this.email, password: this.password });
 
-      console.log('ErrorPass: ', this.errorPass)
 
       if (!this.errorPass) {
         
@@ -112,6 +111,7 @@ export default {
 
       } 
 
+      console.log('ErrorPass: ', this.errorPass)
       this.snackbar = true;
       this.laoding = false;
       return
