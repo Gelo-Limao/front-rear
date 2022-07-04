@@ -64,7 +64,14 @@
 <script>
 import {
   mdiViewDashboard,
-  mdiAccount
+  mdiAccount,
+  mdiMicrosoftXboxController,
+  mdiLaptop,
+  mdiCellphone,
+  mdiFileDocumentMultiple,
+  mdiHuman,
+  mdiCubeSend,
+  mdiGlassFlute
 } from "@mdi/js";
 export default {
   props: {
@@ -72,11 +79,19 @@ export default {
   },
   data: () => ({
     user: 'Administrador',
-    company: 'EuCode Template',
+    company: 'ShopSmart Litoral',
     timestamp: '',
     items: [
       { title: "Dashboard", icon: mdiViewDashboard, link: "/dashboard" },
       { title: "Usuários", icon: mdiAccount, link: "/users" },
+      { title: "Pedidos", icon: mdiCubeSend, link: "/users" },
+      { title: "Notas Fiscais", icon: mdiFileDocumentMultiple, link: "/users" },
+      { title: "Aparelhos", icon: mdiCellphone, link: "/users" },
+      { title: "Consoles", icon: mdiMicrosoftXboxController, link: "/users" },
+      { title: "Notbook`s", icon: mdiLaptop, link: "/users" },
+      { title: "Capas & Pelícolas", icon: mdiGlassFlute, link: "/users" },
+      { title: "Acessórios", icon: mdiAccount, link: "/users" },
+      { title: "Clientes", icon: mdiHuman, link: "/users" },
     ],
     drawer: null,
     ChangeTheme: false,
