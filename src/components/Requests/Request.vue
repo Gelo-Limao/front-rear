@@ -115,27 +115,14 @@
                 <v-col cols="12" md="4">
                   <v-text-field
                     v-model="newUser.name"
-                    label="Client *"
+                    label="Numero do Pedido"
                   ></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
                   <v-text-field
                     v-model="newUser.email"
-                    label="E-mail *"
-                  ></v-text-field>
-                </v-col>
-
-                <v-col cols="12" md="4">
-                  <v-text-field
-                    :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
-                    :rules="[rules.required, rules.min]"
-                    :type="showPass ? 'text' : 'password'"
-                    v-model="newUser.password"
-                    label="Senha *"
-                    hint="At least 8 characters"
-                    counter
-                    @click:append="showPass = !showPass"
+                    label="Cliente *"
                   ></v-text-field>
                 </v-col>
               </v-row>
@@ -199,8 +186,10 @@ export default {
     email: "",
     dialog: false,
     headers: [
-      { text: "Nome", value: "name" },
-      { text: "E-mail", value: "email" },
+      { text: "Número do Pedido", value: "requestNumber" },
+      { text: "Cliente", value: "client" },
+      { text: "Status", value: "status" },
+      { text: "Valor", value: "value" },
       { text: "Ações", value: "actions", sortable: false },
     ],
     defaultItem: {},
