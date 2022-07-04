@@ -69,9 +69,10 @@ import {
   mdiLaptop,
   mdiCellphone,
   mdiFileDocumentMultiple,
-  mdiHuman,
   mdiCubeSend,
-  mdiGlassFlute
+  mdiHeadphones,
+  mdiAccountGroup,
+  mdiCellphoneScreenshot
 } from "@mdi/js";
 export default {
   props: {
@@ -89,9 +90,9 @@ export default {
       { title: "Aparelhos", icon: mdiCellphone, link: "/cellPhones" },
       { title: "Consoles", icon: mdiMicrosoftXboxController, link: "/consoles" },
       { title: "Notbook`s", icon: mdiLaptop, link: "/notbooks" },
-      { title: "Capas & Pelícolas", icon: mdiGlassFlute, link: "/cases" },
-      { title: "Acessórios", icon: mdiAccount, link: "/accessories" },
-      { title: "Clientes", icon: mdiHuman, link: "/clients" },
+      { title: "Capas & Pelícolas", icon: mdiCellphoneScreenshot, link: "/cases" },
+      { title: "Acessórios", icon: mdiHeadphones, link: "/accessories" },
+      { title: "Clientes", icon: mdiAccountGroup, link: "/clients" },
     ],
     drawer: null,
     ChangeTheme: false,
