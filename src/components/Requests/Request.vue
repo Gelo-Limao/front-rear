@@ -48,25 +48,19 @@
                         <v-col cols="12" sm="6" md="4">
                           <v-text-field
                             v-model="editedItem.name"
-                            label="Nome"
+                            label="Numero do Pedido"
                           ></v-text-field>
                         </v-col>
                         <v-col cols="12" sm="6" md="4">
                           <v-text-field
                             v-model="editedItem.email"
-                            label="E-mail"
+                            label="Produtos"
                           ></v-text-field>
                         </v-col>
                         <v-col cols="12" sm="6" md="4">
                           <v-text-field
-                            :append-icon="showPass ? 'mdi-eye' : 'mdi-eye-off'"
-                            :rules="[rules.required, rules.min]"
-                            :type="showPass ? 'text' : 'password'"
-                            v-model="editedItem.password"
-                            label="Nova Senha"
-                            hint="At least 8 characters"
-                            counter
-                            @click:append="showPass = !showPass"
+                            v-model="editedItem.email"
+                            label="Valor do Pedido"
                           ></v-text-field>
                         </v-col>
                       </v-row>
