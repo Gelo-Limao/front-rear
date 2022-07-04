@@ -16,14 +16,14 @@
       <v-text-field
         v-model="search"
         append-icon="mdi-magnify"
-        label="Consulte os usuários por nome, cpf ou perfil..."
+        label="Consulte os pedidos por Cliente..."
       ></v-text-field>
     </v-card-title>
 
     <v-tabs horizontal>
       <v-tab left>
         <v-icon left>{{ icons.icon }}</v-icon
-        >Dados do Usuário
+        >Dados dos Pedidos
       </v-tab>
 
       <v-tab-item>
@@ -112,7 +112,7 @@
         </template>
         <v-card>
           <v-card-title>
-            <span class="headline">Novo Usuário</span>
+            <span class="headline">Novo Pedido</span>
             <v-icon id="titleIcon">{{ icons.iconAdd }}</v-icon>
           </v-card-title>
           <v-card-text>
@@ -121,7 +121,7 @@
                 <v-col cols="12" md="4">
                   <v-text-field
                     v-model="newUser.name"
-                    label="Nome*"
+                    label="Client *"
                   ></v-text-field>
                 </v-col>
 
@@ -189,7 +189,7 @@ import { mdiAccountMultiplePlus } from "@mdi/js";
 
 export default {
   data: () => ({
-    formTitle: "Editar Usuário",
+    formTitle: "Editar Pedido",
     snackbar: false,
     search: "",
     msg: "",
@@ -199,7 +199,6 @@ export default {
     rules: {
       required: (value) => !!value || "Required.",
       min: (v) => v.length >= 8 || "Min 8 characters",
-      emailMatch: () => "The email and password you entered don't match",
     },
     firsstName: "",
     secondName: "",
