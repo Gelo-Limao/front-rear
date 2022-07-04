@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title>
-      Usuários
+      Pedidos
       <v-icon id="titleIcon">{{ icons.icon }}</v-icon>
 
       <v-snackbar v-model="snackbar" top="top">
@@ -184,8 +184,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import { mdiAccountMultiple } from "@mdi/js";
-import { mdiAccountMultiplePlus } from "@mdi/js";
+import { mdiCubeSend } from "@mdi/js";
 
 export default {
   data: () => ({
@@ -216,8 +215,8 @@ export default {
     newUser: {},
     users: [],
     icons: {
-      icon: mdiAccountMultiple,
-      iconAdd: mdiAccountMultiplePlus,
+      icon: mdiCubeSend,
+      iconAdd: mdiCubeSend,
     },
   }),
 
